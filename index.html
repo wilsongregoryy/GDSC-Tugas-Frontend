@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>GDSC-Movie List Web</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Movies By Popularity <a class="TMDB" href="https://www.themoviedb.org/">(TMDB)</a></h1>
+      <h2></h2>
+      <form id="form">
+        <input
+          type="text"
+          placeholder="Search Movie"
+          id="search"
+          class="search"
+          onkeyup="searchBar()"
+        />
+      </form>
+    </header>
+    <div class="page-body">
+      <div id="movies">
+        <!-- Movie Template -->
+        <!-- Open Modal Onclick -->
+        <div class="movie" onclick = 'openModal(this, document.getElementById("movieModal"))'>
+          <img src="./img/noimage.png" alt="Image" class="image"/>
+
+          <div class="movie-info">
+            <h4 class="title">Test</h4>
+            <span class="rating">10</span>
+            <a class="id"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="movieModal" class="modal">
+      <!-- Modal Content -->
+
+      <div class="modalContent">
+        <!-- Close Modal Onclick -->
+        <span class="closeModal" onclick="document.getElementById('movieModal').style.display = 'none';">&times;</span
+        >
+
+        <div class="movieDescription">
+          <u><h2 id="movieDescTitle">Test</h2></u>
+          <h3>Rating: <span id="movieDescRating">6.9</span></h3>
+          <p id="movieDesc" class="movieDesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
